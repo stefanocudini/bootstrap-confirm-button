@@ -22,6 +22,8 @@ Designed especially for devices with small screen.
 
 ```javascript
 
-$('.btn-delete-item').confirmButton({ msg: "Are you Sure?" });
+$('.btn-delete-item').confirmButton({msg:"Are you Sure?"}, function(e) {
+	console.log('Item deleted!');
+});
 
 ```
