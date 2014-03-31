@@ -1,3 +1,10 @@
+/*!
+ * Bootstrap Confirm Button 0.1
+ * https://github.com/stefanocudini/bootstrap-confirm-button
+ *
+ * Copyright 2014, Stefano Cudini - stefano.cudini@gmail.com
+ * Licensed under the MIT license.
+ */
 
 jQuery.fn.confirmButton = function(options) {
 
