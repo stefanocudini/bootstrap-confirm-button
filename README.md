@@ -1,4 +1,3 @@
-
 Bootstrap Confirm Button
 ============
 
@@ -27,3 +26,5 @@ $('.btn-delete-item').confirmButton({msg:"Are you Sure?"}, function(e) {
 });
 
 ```
+
+![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/confirm-delete-button.png)
