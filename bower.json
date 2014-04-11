@@ -1,0 +1,9 @@
+{
+  "name": "bootstrap-confirm-button",
+  "version": "0.0.1",
+  "main": "bootstrap-confirm-button.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+  ]
+}

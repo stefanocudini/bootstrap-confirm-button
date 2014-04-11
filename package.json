@@ -1,0 +1,27 @@
+{
+  "name": "bootstrap-confirm-button",
+  "version": "0.0.1",
+  "description": "A simple button to confirm a task, inline unobtrusive button confirmation",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:stefanocudini/bootstrap-confirm-button.git"
+  },
+  "homepage": "https://github.com/stefanocudini/bootstrap-confirm-button",
+  "author": {
+    "name": "Stefano Cudini",
+    "email": "stefano.cudini@gmail.com",
+    "url": "http://labs.easyblog.it/"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jquery",
+    "button",
+    "confirm",
+    "bootstrap"
+  ],
+  "dependencies": {
+    "bootstrap": "*"
+  },
+  "devDependencies": {
+  }
+}
