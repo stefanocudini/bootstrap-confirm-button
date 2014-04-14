@@ -28,3 +28,10 @@ $('.btn-delete-item').confirmButton({msg:"I'm sure!"}, function(e) {
 ```
 
 ![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/confirm-delete-button.png)
+
+Source code:
+------
+
+[Github](https://github.com/stefanocudini/bootstrap-confirm-button)
+[NPM](https://npmjs.org/package/bootstrap-confirm-button)  
+[Atmosphere](https://atmosphere.meteor.com/package/bootstrap-confirm-button)

@@ -5,3 +5,5 @@ components
 bower_components/
 .grunt
 .idea/
+smart.lock
+packages/
