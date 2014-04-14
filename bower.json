@@ -1,6 +1,6 @@
 {
-	"name": "bootstrap-confirm-button",
-	"main": "bootstrap-confirm-button.js",  
+	"name": "bootstrap3-confirm-button",
+	"main": "bootstrap3-confirm-button.js",  
 	"version": "0.0.1",
 	"authors": ["Stefano Cudini <stefano.cudini@gmail.com>"],
 	"homepage": "https://github.com/stefanocudini/bootstrap-confirm-button",
