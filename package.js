@@ -1,8 +1,7 @@
 Package.describe({
-	summary: "Leaflet Dynamic JSON Layer"
+	summary: "bootstrap-confirm-button"
 });
 
 Package.on_use(function (api, where) {
-	api.add_files('dist/leaflet-layerjson.min.js', 'client');
-	//TODO server-side methods...	
+	api.add_files('bootstrap-confirm-button.js', 'client');
 });

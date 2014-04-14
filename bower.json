@@ -1,9 +1,15 @@
 {
-  "name": "bootstrap-confirm-button",
-  "version": "0.0.1",
-  "main": "bootstrap-confirm-button.js",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-  ]
+	"name": "bootstrap-confirm-button",
+	"main": "bootstrap-confirm-button.js",  
+	"version": "0.0.1",
+	"authors": ["Stefano Cudini <stefano.cudini@gmail.com>"],
+	"homepage": "https://github.com/stefanocudini/bootstrap-confirm-button",
+	"license": "MIT",
+	"dependencies": {
+		"bootstrap": "*"
+	},	
+	"ignore": [
+		"**/.*",
+		"node_modules",
+	]
 }
