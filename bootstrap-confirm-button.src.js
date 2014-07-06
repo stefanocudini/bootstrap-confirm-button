@@ -20,7 +20,7 @@ jQuery.fn.btsConfirmButton = function(options, callback) {
             oriText = thisBtn$.html();
 
         function resetBtn() {
-            thisBtn$.html(oriText).removeClass(opts.className).data('confirmed',false);
+            thisBtn$.html(oriText).removeClass(options.className).data('confirmed',false);
         }
 
         thisBtn$.data('confirmed', false);
@@ -34,13 +34,13 @@ jQuery.fn.btsConfirmButton = function(options, callback) {
             else
             {
                 thisBtn$.data('confirmed',true);
-                thisBtn$.html(opts.msg).addClass(opts.className).bind('mouseout.confirm', function() {
-                    timeoToken = setTimeout(resetBtn, opts.timeout);
+                thisBtn$.html(options.msg).addClass(options.className).bind('mouseout.confirm', function() {
+                    timeoToken = setTimeout(resetBtn, options.timeout);
                 }).bind('mouseover.confirm', function() {
                     clearTimeout(timeoToken);
                 });
             }
-        }).removeClass(opts.className);
+        }).removeClass(options.className);
 
     });
 
