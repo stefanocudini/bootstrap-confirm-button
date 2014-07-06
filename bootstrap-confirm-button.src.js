@@ -1,26 +1,24 @@
 /*!
- * Bootstrap Confirm Button 0.1
+ * Bootstrap Confirm Button
  * https://github.com/stefanocudini/bootstrap-confirm-button
  *
  * Copyright 2014, Stefano Cudini - stefano.cudini@gmail.com
  * Licensed under the MIT license.
  */
 
-jQuery.fn.confirmButton = function(options, callback) {
+jQuery.fn.btsConfirmButton = function(options, callback) {
 
-	var opts = $.extend({
-				msg: "I'm sure!",
-				className: 'btn-danger',
-				timeout: 1500
-			}, options);
+	options = $.extend({
+		msg: "I'm sure!",
+		className: 'btn-danger',
+		timeout: 2000
+	}, options);
 
     $(this).each(function(idx, btn) {
         var timeoToken,
             thisBtn$ = $(btn),
             oriText = thisBtn$.html();
 
-
-        console.log(thisBtn$);
         function resetBtn() {
             thisBtn$.html(oriText).removeClass(opts.className).data('confirmed',false);
         }
