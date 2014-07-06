@@ -6,6 +6,6 @@
 	"author": "Stefano Cudini <stefano.cudini@gmail.com>",
 	"git": "https://github.com/stefanocudini/bootstrap-confirm-button.git",
 	"packages": {
-		"bootstrap":{}
+		"bootstrap-3":{}
 	}
 }
