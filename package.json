@@ -15,8 +15,6 @@
   "license": "MIT",
   "keywords": [
     "jquery",
-    "button",
-    "confirm",
     "bootstrap"
   ],
   "dependencies": {
