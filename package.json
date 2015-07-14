@@ -20,6 +20,7 @@
     "bootstrap"
   ],
   "dependencies": {
+    "jquery": "*",
     "bootstrap": "*"
   },
   "devDependencies": {
