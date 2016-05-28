@@ -122,10 +122,20 @@ Designed especially for devices with small screen. </p>
 <pre><code class="lang-html">
 &lt;a class=&quot;btn btn-primary btn-delete-item&quot;&gt;Delete&lt;/a&gt;</code></pre>
 <pre><code class="lang-javascript">
-$(&#39;.btn-delete-item&#39;).btsConfirmButton({msg:&quot;I&#39;m sure!&quot;}, function(e) {
+$(&#39;.btn-delete-item&#39;).btsConfirmButton(&quot;I&#39;m sure!&quot;, function(e) {
+    console.log(&#39;Item deleted!&#39;);
+});</code></pre>
+<p><strong>advanced configuration:</strong></p>
+<pre><code class="lang-javascript">$(&#39;.btn-delete-item&#39;).btsConfirmButton({
+        msg: &quot;Confirm Deletion&quot;,
+        timeout: 3000,
+        className: &#39;btn-danger&#39;
+    }, function(e) {
     console.log(&#39;Item deleted!&#39;);
 });</code></pre>
 <p><img src="https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/confirm-delete-button.png" alt="Image"></p>
+<h2 id="example-">Example:</h2>
+<p><a href="example.html">Example</a></p>
 <h2 id="source-code-">Source code:</h2>
 <p><a href="https://github.com/stefanocudini/bootstrap-confirm-button">Github</a>
 <a href="https://npmjs.org/package/bootstrap-confirm-button">NPM</a><br><a href="https://atmosphere.meteor.com/package/bootstrap-confirm-button">Atmosphere</a></p>

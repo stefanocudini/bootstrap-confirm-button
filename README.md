@@ -21,13 +21,29 @@ Designed especially for devices with small screen.
 
 ```javascript
 
-$('.btn-delete-item').btsConfirmButton({msg:"I'm sure!"}, function(e) {
+$('.btn-delete-item').btsConfirmButton("I'm sure!", function(e) {
+	console.log('Item deleted!');
+});
+```
+
+**advanced configuration:**
+
+```javascript
+$('.btn-delete-item').btsConfirmButton({
+		msg: "Confirm Deletion",
+		timeout: 3000,
+		className: 'btn-danger'
+	}, function(e) {
 	console.log('Item deleted!');
 });
 
 ```
 
 ![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/confirm-delete-button.png)
+
+Example:
+------
+[Example](example.html)
 
 Source code:
 ------
