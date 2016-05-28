@@ -1,0 +1,35 @@
+<!DOCTYPE  html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Example</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>  
+    <h1 id="bootstrap-confirm-button">Bootstrap Confirm Button: <small>Example</small></h1>
+
+    <ul id="list" class="list-group">
+      <li class="list-group-item">
+        Item number One <a class="btn btn-default btn-del">&times;</a>
+      </li>
+      <li class="list-group-item">
+        Item number Two <a class="btn btn-default btn-del">&times;</a>
+      </li>
+      <li class="list-group-item">
+        Item number Three <a class="btn btn-default btn-del">&times;</a>
+      </li>
+    </ul>
+  </body>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>  
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="bootstrap-confirm-button.src.js"></script>
+  <script>
+  $('.btn-del').btsConfirmButton("Delete this item Now!", function(e) {
+
+      console.log('Deleted!');
+
+      $(e.target).parents('.list-group-item').remove();
+
+  });
+  </script>
+</html>

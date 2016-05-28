@@ -2,17 +2,20 @@
  * Bootstrap Confirm Button
  * https://github.com/stefanocudini/bootstrap-confirm-button
  *
- * Copyright 2014, Stefano Cudini - stefano.cudini@gmail.com
+ * Copyright 2016, Stefano Cudini - stefano.cudini@gmail.com
  * Licensed under the MIT license.
  */
 
-jQuery.fn.btsConfirmButton = function(options, callback) {
+jQuery.fn.btsConfirmButton = function(opts, callback) {
 
-	options = $.extend({
+    if(typeof opts === 'string')
+        opts = {msg: opts};
+
+	var opts = $.extend({
 		msg: "I'm sure!",
 		className: 'btn-danger',
 		timeout: 2000
-	}, options);
+	}, opts);
 
     $(this).each(function(idx, btn) {
         var timeoToken,
@@ -20,7 +23,7 @@ jQuery.fn.btsConfirmButton = function(options, callback) {
             oriText = thisBtn$.html();
 
         function resetBtn() {
-            thisBtn$.html(oriText).removeClass(options.className).data('confirmed',false);
+            thisBtn$.html(oriText).removeClass(opts.className).data('confirmed',false);
         }
 
         thisBtn$.data('confirmed', false);
@@ -34,13 +37,13 @@ jQuery.fn.btsConfirmButton = function(options, callback) {
             else
             {
                 thisBtn$.data('confirmed',true);
-                thisBtn$.html(options.msg).addClass(options.className).bind('mouseout.confirm', function() {
-                    timeoToken = setTimeout(resetBtn, options.timeout);
+                thisBtn$.html(opts.msg).addClass(opts.className).bind('mouseout.confirm', function() {
+                    timeoToken = setTimeout(resetBtn, opts.timeout);
                 }).bind('mouseover.confirm', function() {
                     clearTimeout(timeoToken);
                 });
             }
-        }).removeClass(options.className);
+        }).removeClass(opts.className);
 
     });
 
