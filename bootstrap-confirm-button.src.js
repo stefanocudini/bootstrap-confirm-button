@@ -2,7 +2,7 @@
  * Bootstrap Confirm Button
  * https://github.com/stefanocudini/bootstrap-confirm-button
  *
- * Copyright 2016, Stefano Cudini - stefano.cudini@gmail.com
+ * Copyright 2017, Stefano Cudini - stefano.cudini@gmail.com
  * Licensed under the MIT license.
  */
 
@@ -13,17 +13,27 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
 
 	var opts = $.extend({
 		msg: "I'm sure!",
-		className: 'btn-danger',
+		classname: 'btn-danger',
 		timeout: 2000
 	}, opts);
 
     $(this).each(function(idx, btn) {
         var timeoToken,
             thisBtn$ = $(btn),
-            oriText = thisBtn$.html();
+            datas = thisBtn$.data(),            
+            oriHtml = thisBtn$.html(),
+            optsEl = $.extend({}, opts);
+
+        for(var i in datas) {
+            var opt, type, val = datas[i];
+            if( (opt = i.match(/^confirm(.*)$/)) && (type = opt[1].toLowerCase()) ) {
+                optsEl[type] = val;
+                console.log(type, val)
+            }
+        }
 
         function resetBtn() {
-            thisBtn$.html(oriText).removeClass(opts.className).data('confirmed',false);
+            thisBtn$.html(oriHtml).removeClass(optsEl.classname).data('confirmed',false);
         }
 
         thisBtn$.data('confirmed', false);
@@ -37,13 +47,13 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
             else
             {
                 thisBtn$.data('confirmed',true);
-                thisBtn$.html(opts.msg).addClass(opts.className).bind('mouseout.confirm', function() {
-                    timeoToken = setTimeout(resetBtn, opts.timeout);
+                thisBtn$.html(optsEl.msg).addClass(optsEl.classname).bind('mouseout.confirm', function() {
+                    timeoToken = setTimeout(resetBtn, parseInt(optsEl.timeout));
                 }).bind('mouseover.confirm', function() {
                     clearTimeout(timeoToken);
                 });
             }
-        }).removeClass(opts.className);
+        }).removeClass(optsEl.classname);
 
     });
 
