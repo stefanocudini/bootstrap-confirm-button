@@ -50,4 +50,3 @@ Source code:
 
 [Github](https://github.com/stefanocudini/bootstrap-confirm-button)
 [NPM](https://npmjs.org/package/bootstrap-confirm-button)  
-[Atmosphere](https://atmosphere.meteor.com/package/bootstrap-confirm-button)
