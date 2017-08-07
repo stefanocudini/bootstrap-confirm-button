@@ -10,6 +10,8 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
 
     if(typeof opts === 'string')
         opts = {msg: opts};
+    else if(typeof opts === 'function')
+        callback = opts;
 
 	var opts = $.extend({
 		msg: "I'm sure!",

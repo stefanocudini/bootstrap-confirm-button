@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-confirm-button",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A simple button to confirm a task, inline unobtrusive button confirmation",
   "repository": {
     "type": "git",
@@ -19,6 +19,6 @@
   ],
   "dependencies": {
     "jquery": "*",
-    "bootstrap": "*"
+    "bootstrap": "3.3.7"
   }
 }

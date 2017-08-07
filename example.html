@@ -6,33 +6,57 @@
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>  
-  <h1 id="bootstrap-confirm-button">Bootstrap Confirm Button: <small>Example</small></h1>
+  <div class="container">
 
-  <ul id="list" class="list-group">
-    <li class="list-group-item">
-      Item number One
-      <a class="btn btn-default btn-del" data-confirm-msg="Confirm to remove One!">&times;</a>
-    </li>
-    <li class="list-group-item">
-      Item number Two 
-      <a class="btn btn-default btn-del" data-confirm-classname="btn-warning">&times;</a>
-    </li>
-    <li class="list-group-item">
-      Item number Three 
-      <a class="btn btn-default btn-del" data-confirm-timeout="400">&times;</a>
-    </li>
-  </ul>
+    <h1 id="bootstrap-confirm-button">
+      Bootstrap Confirm Button: <small>Example</small>
+    </h1>
+    <div class="row">
+      <div class="col-sm-10">
+
+        <ul id="list1" class="list-group">
+          <li class="list-group-item">
+            Item One
+            <a class="btn btn-default btn-del" data-confirm-msg="Confirm to remove One!">&times;</a>
+          </li>
+          <li class="list-group-item">
+            Item Two 
+            <a class="btn btn-default btn-del" data-confirm-classname="btn-warning">&times;</a>
+          </li>
+        </ul>
+
+        <ul id="list2" class="list-group">
+          <li class="list-group-item">
+            Item Three 
+            <button type="button" class="close" aria-label="Close" data-confirm-msg="Remove!">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </li>
+          <li class="list-group-item">
+            Item Four 
+            <button type="button" class="close" aria-label="Close" data-confirm-msg="Remove!">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
 </body>
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>  
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="bootstrap-confirm-button.src.js"></script>
 <script>
 $('.btn-del').btsConfirmButton("Delete item Now!", function(e) {
+    $(e.target).parents('.list-group-item').remove();
+    console.log('Deleted!');
+});
+$('#list2 button').btsConfirmButton(function(e) {
 
     $(e.target).parents('.list-group-item').remove();
     
     console.log('Deleted!');
-
 });
 </script>
 </html>
