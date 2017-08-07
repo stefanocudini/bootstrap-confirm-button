@@ -30,7 +30,6 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
             var opt, type, val = datas[i];
             if( (opt = i.match(/^confirm(.*)$/)) && (type = opt[1].toLowerCase()) ) {
                 optsEl[type] = val;
-                console.log(type, val)
             }
         }
 
