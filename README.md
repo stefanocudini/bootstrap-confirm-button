@@ -48,7 +48,7 @@ $('.btn-delete-item').btsConfirmButton({
 
 ```
 
-![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/confirm-delete-button.png)
+![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/images/confirm-delete-button.png)
 
 # Source:
 
