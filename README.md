@@ -13,11 +13,10 @@ Designed especially for devices with small screen.
 
 # Events
 
-| Event			 | Data			  | Description                               |
-| ---------------------- | ---------------------- | ----------------------------------------- |
-| 'search:locationfound' | {latlng, title, layer} | fired after moved and show markerLocation |
-| 'search:expanded'	 | {}	                  | fired after control was expanded          |
-| 'search:collapsed'	 | {}		          | fired after control was collapsed         |
+| Event			   | Data | Description            |
+| ---------------- | ---- | ---------------------- |
+| 'confirm:before' | {}   | fired at first click over button  |
+| 'confirm:expired'| {}	  | fired after button is auto hidden |
 
 
 # Usage:
