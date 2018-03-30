@@ -40,23 +40,40 @@
           </li>
         </ul>
 
+        <code></code>
+
       </div>
     </div>
   </div>
 </body>
 <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>  
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script src="bootstrap-confirm-button.src.js"></script>
+<script src="../bootstrap-confirm-button.src.js"></script>
 <script>
+
+var $code = $('code');
+
 $('.btn-del').btsConfirmButton("Delete item Now!", function(e) {
     $(e.target).parents('.list-group-item').remove();
-    console.log('Deleted!');
+    
+    $code.text('Deleted!');
+
+}).on('confirm:before', function(e) {
+  
+  $code.text("confirm:before");
+
+}).on('confirm:expired', function(e) {
+  
+  $code.text("confirm:expired");
+
 });
+
 $('#list2 button').btsConfirmButton(function(e) {
 
     $(e.target).parents('.list-group-item').remove();
     
     console.log('Deleted!');
 });
+
 </script>
 </html>

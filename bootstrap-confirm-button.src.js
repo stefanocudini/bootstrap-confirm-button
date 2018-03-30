@@ -36,20 +36,30 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
         function resetBtn() {
             thisBtn$.html(oriHtml).removeClass(optsEl.classname).data('confirmed',false);
         }
-
+        
         thisBtn$.data('confirmed', false);
         thisBtn$.on('click.confirm', function(e) {
             e.preventDefault();
+            
+
             if(thisBtn$.data('confirmed'))
             {
                 callback.call(thisBtn$, e);
+                //TODO not work
+                ////$(e.target).trigger('confirm:after');
                 resetBtn();
             }
             else
             {
                 thisBtn$.data('confirmed',true);
+                
+                $(e.target).trigger('confirm:before', e.target);
+
                 thisBtn$.html(optsEl.msg).addClass(optsEl.classname).bind('mouseout.confirm', function() {
-                    timeoToken = setTimeout(resetBtn, parseInt(optsEl.timeout));
+                    timeoToken = setTimeout(function() {
+                        resetBtn();
+                        $(e.target).trigger('confirm:expired', e.target);
+                    }, parseInt(optsEl.timeout));
                 }).bind('mouseover.confirm', function() {
                     clearTimeout(timeoToken);
                 });

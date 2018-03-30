@@ -9,8 +9,18 @@ Designed especially for devices with small screen.
 
 *Ispired by: http://eli.eliandlyndi.com/2011/10/10/using-jquery-to-provide-an-inline-confirmation-on-buttons/*
 
+[Demo](example.html)
 
- #usage:
+# Events
+
+| Event			 | Data			  | Description                               |
+| ---------------------- | ---------------------- | ----------------------------------------- |
+| 'search:locationfound' | {latlng, title, layer} | fired after moved and show markerLocation |
+| 'search:expanded'	 | {}	                  | fired after control was expanded          |
+| 'search:collapsed'	 | {}		          | fired after control was collapsed         |
+
+
+# Usage:
 
 
 ```html
@@ -41,12 +51,7 @@ $('.btn-delete-item').btsConfirmButton({
 
 ![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/confirm-delete-button.png)
 
-Example:
-------
-[Example](example.html)
-
-Source code:
-------
+# Source:
 
 [Github](https://github.com/stefanocudini/bootstrap-confirm-button)
 [NPM](https://npmjs.org/package/bootstrap-confirm-button)  
