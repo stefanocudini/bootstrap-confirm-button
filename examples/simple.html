@@ -55,8 +55,10 @@ var $code = $('code');
 
 $('.btn-del').btsConfirmButton("Delete item Now!", function(e) {
     $(e.target).parents('.list-group-item').remove();
-    
-    $code.text('Deleted!');
+})
+.on('confirm:after', function(e) {
+  
+  $code.text("confirm:after");
 
 }).on('confirm:before', function(e) {
   
