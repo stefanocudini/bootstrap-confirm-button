@@ -13,7 +13,7 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
     else if(typeof opts === 'function')
         callback = opts;
 
-	var opts = $.extend({
+	opts = $.extend({
 		msg: "I'm sure!",
 		classname: 'btn-danger',
 		timeout: 2000
