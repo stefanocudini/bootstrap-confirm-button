@@ -1,6 +1,9 @@
 Bootstrap Confirm Button
 ============
 
+[![npm version](https://badge.fury.io/js/bootstrap-confirm-button.svg)](http://badge.fury.io/js/bootstrap-confirm-button)
+
+
 A simple button to comfirm a task.
 Instead of using rude modals that interrupt a user's workflow, let's use a inline unobtrusive button instead.
 Designed especially for devices with small screen. 
