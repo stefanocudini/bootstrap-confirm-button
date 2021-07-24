@@ -1,11 +1,14 @@
 Bootstrap Confirm Button
 ============
 
+[![npm version](https://badge.fury.io/js/bootstrap-confirm-button.svg)](http://badge.fury.io/js/bootstrap-confirm-button)
+
+
 A simple button to comfirm a task.
 Instead of using rude modals that interrupt a user's workflow, let's use a inline unobtrusive button instead.
 Designed especially for devices with small screen. 
 
-**Compatible with Bootstrap 3!**
+**Compatible with Bootstrap 3.3.7!**
 
 *Ispired by: http://eli.eliandlyndi.com/2011/10/10/using-jquery-to-provide-an-inline-confirmation-on-buttons/*
 
@@ -13,11 +16,10 @@ Designed especially for devices with small screen.
 
 # Events
 
-| Event			 | Data			  | Description                               |
-| ---------------------- | ---------------------- | ----------------------------------------- |
-| 'search:locationfound' | {latlng, title, layer} | fired after moved and show markerLocation |
-| 'search:expanded'	 | {}	                  | fired after control was expanded          |
-| 'search:collapsed'	 | {}		          | fired after control was collapsed         |
+| Event			   | Data | Description            |
+| ---------------- | ---- | ---------------------- |
+| 'confirm:before' | {}   | fired at first click over button  |
+| 'confirm:expired'| {}	  | fired after button is auto hidden |
 
 
 # Usage:
@@ -49,7 +51,7 @@ $('.btn-delete-item').btsConfirmButton({
 
 ```
 
-![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/confirm-delete-button.png)
+![Image](https://raw.githubusercontent.com/stefanocudini/bootstrap-confirm-button/master/images/confirm-delete-button.png)
 
 # Source:
 

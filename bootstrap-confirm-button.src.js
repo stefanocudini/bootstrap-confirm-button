@@ -13,7 +13,9 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
     else if(typeof opts === 'function')
         callback = opts;
 
-	var opts = $.extend({
+    callback = callback || $.noop;
+    
+	opts = $.extend({
 		msg: "I'm sure!",
 		classname: 'btn-danger',
 		timeout: 2000
@@ -44,9 +46,8 @@ jQuery.fn.btsConfirmButton = function(opts, callback) {
 
             if(thisBtn$.data('confirmed'))
             {
+                $(e.target).trigger('confirm:after');
                 callback.call(thisBtn$, e);
-                //TODO not work
-                ////$(e.target).trigger('confirm:after');
                 resetBtn();
             }
             else
