@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-confirm-button",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "description": "A simple button to confirm a task, inline unobtrusive button confirmation",
   "main": "bootstrap-confirm-button.src.js",
   "repository": {
