@@ -1,13 +1,13 @@
 {
   "name": "bootstrap-confirm-button",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "A simple button to confirm a task, inline unobtrusive button confirmation",
   "main": "bootstrap-confirm-button.src.js",
   "repository": {
     "type": "git",
     "url": "git@github.com:stefanocudini/bootstrap-confirm-button.git"
   },
-  "homepage": "https://github.com/stefanocudini/bootstrap-confirm-button",
+  "homepage": "https://opengeo.tech/bootstrap-confirm-button",
   "author": {
     "name": "Stefano Cudini",
     "email": "stefano.cudini@gmail.com",
@@ -16,7 +16,8 @@
   "license": "MIT",
   "keywords": [
     "jquery",
-    "bootstrap"
+    "bootstrap",
+	"front-end"
   ],
   "dependencies": {
     "jquery": "*",
